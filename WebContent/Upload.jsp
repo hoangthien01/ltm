@@ -22,7 +22,7 @@
 				<p>Please don't go. Just wait for a minute.</p>
 			</div>
 		</form>
-		<button class="go-back" type = "button" name = "back" onClick="history.back()">Go back</button>
+		<button id="go-back" class="go-back" type = "button" name = "back" onClick="history.back()">Go back</button>
 	</div>
 	<%
 		} else {
@@ -76,7 +76,9 @@ body {
 
 <script type="text/javascript">
 function uploading() {
-	var dots = document.getElementById("dots");
+	 var goBack= document.getElementById('go-back');
+	 goBack.disabled  = true;
+	 var dots = document.getElementById("dots");
 	  let count = 0;
 	  setInterval(()=> {
 	  	 count++;
